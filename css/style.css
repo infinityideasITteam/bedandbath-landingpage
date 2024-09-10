@@ -1,0 +1,130 @@
+/* Make the navbar sticky on the right side */
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd; /* Optional border */
+}
+
+.sticky-navbar .navbar-brand {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.sticky-navbar .navbar-nav .nav-item .nav-link {
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.sticky-navbar .logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Make navbar elements responsive */
+@media (max-width: 991.98px) {
+    .sticky-navbar {
+        padding: 0.5rem;
+    }
+
+    .sticky-navbar .navbar-nav .nav-link {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sticky-navbar .navbar-nav {
+        margin-top: 0.5rem;
+    }
+
+    .sticky-navbar .navbar-nav .nav-link {
+        padding-left: 0.5rem;
+    }
+}
+
+/* Ensure carousel height and overlay position */
+.carousel-item img {
+    height: 500px; /* Adjust carousel height */
+    object-fit: cover; /* Makes images cover the full height */
+}
+
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Higher than the carousel */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align form to the right */
+    padding: 20px;
+    pointer-events: none; /* To allow carousel controls to work */
+}
+
+.form-container {
+    max-width: 400px;
+    pointer-events: all; /* To allow form interaction */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%; /* Make form width responsive */
+        margin-right: 1rem; /* Add some space from the right edge */
+    }
+
+    .carousel-item img {
+        height: 300px; /* Reduce height of carousel on smaller screens */
+    }
+}
+/* Optional: Add custom styles if needed */
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Adjust layout if needed for smaller screens */
+@media (max-width: 768px) {
+    .container img {
+        margin-bottom: 20px;
+    }
+}
+/* Footer customization */
+.footer {
+    background-color: #343a40; /* Dark background */
+    color: white;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer p, .footer a {
+    font-size: 0.9rem;
+    color: #ffffff; /* Text color */
+}
+
+.footer a:hover {
+    color: #17a2b8; /* Hover color for links */
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #17a2b8; /* Hover color for social icons */
+}
+
+/* Add padding for small screens */
+@media (max-width: 576px) {
+    .footer {
+        text-align: center;
+    }
+}
